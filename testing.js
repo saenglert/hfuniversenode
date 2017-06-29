@@ -1,25 +1,25 @@
-/// <reference path="typings/index.d.ts" />
 "use strict";
-exports.__esModule = true;
-var mongodb = require("mongodb");
-var assert = require("assert");
-var MongoClient = mongodb.MongoClient;
-// Connection URL
-var url = "mongodb://localhost:27017/myproject";
-// Use connect method to connect to the server
-MongoClient.connect(url, function (err, db) {
-    assert.equal(null, err);
-    console.log("Connected successfully to server");
-    db.close();
-});
-MongoClient.conn
-var solarsystemRadius = 2.0;
-var distanceSolarsystems = 7.0;
-var solarsystemsPerDimension = 7;
-for (var x = solarsystemRadius; x < solarsystemsPerDimension * distanceSolarsystems + solarsystemRadius; x += distanceSolarsystems) {
-    for (var y = solarsystemRadius; y < solarsystemsPerDimension * distanceSolarsystems + solarsystemRadius; y += distanceSolarsystems) {
-        for (var z = solarsystemRadius; z < solarsystemsPerDimension * distanceSolarsystems + solarsystemRadius; z += distanceSolarsystems) {
-            //console.log("X: " + x + " | Y: " + y + " | Z: " + z);
-        }
+/// <reference path="typings/index.d.ts" />
+Object.defineProperty(exports, "__esModule", { value: true });
+const mongodb = require("mongodb");
+var hfuniverse;
+(function (hfuniverse) {
+    let mongoclient = mongodb.MongoClient;
+    let databaseName = "hfuniverse";
+    let host = "mongodb://localhost:27017/eia2ss17";
+    console.log("before start");
+    start().then(function (message) {
+        console.log(message);
+    });
+    console.log("after start");
+    async function start() {
+        console.log("start start");
+        let db = await mongoclient.connect(host + databaseName);
+        let collections = await db.collection("planets");
+        let cursor = collections.find();
+        let data = await cursor.toArray();
+        console.log(data);
+        return "start end";
     }
-}
+})(hfuniverse || (hfuniverse = {}));
+//# sourceMappingURL=testing.js.map

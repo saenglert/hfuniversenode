@@ -1,5 +1,276 @@
 {
-  "solarSystemRadius": 2.0,
-  "distanceBetweenSystems": 7.0,
-  "systemsPerDimension": 7
+  "service": {
+    "database": {
+      "host": "localhost",
+      "port": 27017,
+      "name": "hfuniverse"
+    },
+    "http": {
+      "port": 8100
+    }
+  },
+  "game": {
+    "maxPlayerCount": 64,
+    "maxBaseCount": 4,
+    "startResources": [
+      2000,
+      200,
+      0,
+      100,
+      50,
+      0
+    ],
+    "recyclingYield": 50,
+    "conquerHP": 400,
+    "timeToDestroy": 72
+  },
+  "universe": {
+    "size": 700,
+    "solarSystemRadius": 2.0,
+    "systemsPerDimension": 7
+  },
+  "solarsystem": {
+    "size": 800,
+    "minDistanceBetween": 7.0,
+    "minPlanetCount": 3,
+    "maxPlanetCount": 7
+  },
+  "planet": {
+    "minDistanceBetween": 9,
+    "chanceOfHabitability": 25
+  },
+  "resources": [
+    {
+      "name": "Waldemarium",
+      "probability": 80
+    },
+    {
+      "name": "Helgen",
+      "probability": 65
+    },
+    {
+      "name": "Frankur",
+      "probability": 50
+    },
+    {
+      "name": "Thomasium",
+      "probability": 40
+    },
+    {
+      "name": "Michaelum",
+      "probability": 30
+    },
+    {
+      "name": "Jirkan",
+      "probability": 20
+    }
+  ],
+  "bases": [
+    {
+      "name": "Alpha",
+      "hp": 50000,
+      "shield": 1500,
+      "regeneration": 1.15,
+      "firepower": 2000,
+      "cost": [
+        0,
+        20000,
+        0,
+        0,
+        5000,
+        10000
+      ]
+    }
+  ],
+  "ships": [
+    {
+      "name": "Alpha",
+      "impulseVelocity": 45,
+      "warpVelocity": 405,
+      "cargo": 1000,
+      "strength": 0,
+      "miningVelocity": 40,
+      "hp": 2000,
+      "shield": 30,
+      "regeneration": 1.1,
+      "impulseCon": 0.14,
+      "warpCon": 0.14,
+      "cost": [
+        0,
+        50,
+        0,
+        30,
+        20,
+        0
+      ]
+    },
+    {
+      "name": "Beta",
+      "impulseVelocity": 45,
+      "warpVelocity": 405,
+      "cargo": 1500,
+      "strength": 0,
+      "miningVelocity": 70,
+      "hp": 5000,
+      "shield": 50,
+      "regeneration": 1.1,
+      "impulseCon": 0.14,
+      "warpCon": 0.14,
+      "cost": [
+        0,
+        100,
+        0,
+        50,
+        50,
+        0
+      ]
+    },
+    {
+      "name": "Gamma",
+      "impulseVelocity": 45,
+      "warpVelocity": 405,
+      "cargo": 2000,
+      "strength": 0,
+      "miningVelocity": 100,
+      "hp": 8000,
+      "shield": 70,
+      "regeneration": 1.1,
+      "impulseCon": 0.14,
+      "warpCon": 0.14,
+      "cost": [
+        0,
+        250,
+        0,
+        110,
+        100,
+        0
+      ]
+    },
+    {
+      "name": "Delta",
+      "impulseVelocity": 50,
+      "warpVelocity": 450,
+      "cargo": 600,
+      "strength": 200,
+      "miningVelocity": 15,
+      "hp": 5000,
+      "shield": 20,
+      "regeneration": 1.1,
+      "impulseCon": 0.13,
+      "warpCon": 0.13,
+      "cost": [
+        0,
+        200,
+        100,
+        50,
+        100,
+        0
+      ]
+    },
+    {
+      "name": "Epsilon",
+      "impulseVelocity": 50,
+      "warpVelocity": 450,
+      "cargo": 800,
+      "strength": 300,
+      "miningVelocity": 30,
+      "hp": 8000,
+      "shield": 50,
+      "regeneration": 1.1,
+      "impulseCon": 0.13,
+      "warpCon": 0.13,
+      "cost": [
+        0,
+        400,
+        250,
+        210,
+        200,
+        0
+      ]
+    },
+    {
+      "name": "Zeta",
+      "impulseVelocity": 50,
+      "warpVelocity": 450,
+      "cargo": 1200,
+      "strength": 200,
+      "miningVelocity": 60,
+      "hp": 12000,
+      "shield": 80,
+      "regeneration": 1.1,
+      "impulseCon": 0.13,
+      "warpCon": 0.13,
+      "cost": [
+        0,
+        800,
+        500,
+        280,
+        300,
+        0
+      ]
+    },
+    {
+      "name": "Eta",
+      "impulseVelocity": 35,
+      "warpVelocity": 315,
+      "cargo": 0,
+      "strength": 450,
+      "miningVelocity": 0,
+      "hp": 10000,
+      "shield": 150,
+      "regeneration": 1.1,
+      "impulseCon": 0.16,
+      "warpCon": 0.17,
+      "cost": [
+        0,
+        500,
+        400,
+        110,
+        100,
+        0
+      ]
+    },
+    {
+      "name": "Theta",
+      "impulseVelocity": 35,
+      "warpVelocity": 315,
+      "cargo": 0,
+      "strength": 600,
+      "miningVelocity": 0,
+      "hp": 12000,
+      "shield": 200,
+      "regeneration": 1.1,
+      "impulseCon": 0.16,
+      "warpCon": 0.17,
+      "cost": [
+        0,
+        1000,
+        600,
+        320,
+        300,
+        0
+      ]
+    },
+    {
+      "name": "Iota",
+      "impulseVelocity": 30,
+      "warpVelocity": 250,
+      "cargo": 0,
+      "strength": 750,
+      "miningVelocity": 0,
+      "hp": 18000,
+      "shield": 350,
+      "regeneration": 1.1,
+      "impulseCon": 0.16,
+      "warpCon": 0.17,
+      "cost": [
+        0,
+        200,
+        1300,
+        860,
+        800,
+        0
+      ]
+    }
+  ]
 }
