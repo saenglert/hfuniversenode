@@ -1,6 +1,16 @@
 import fs = require("fs");
 import path = require("path");
 
+// Variable holding the config data in a defined format
+// To be imported in init.ts
+export let data: Config = JSON.parse(
+    fs.readFileSync(
+        path.join(__dirname , "..", "data", "config" , "hfuniverse.json"), "utf8"
+    )
+);
+
+console.log("HFUniverse config loaded");
+
 // Interface for easy accessibility of the config files contents
 interface Config {
     // Defining Variables for the HFUniverse Service
@@ -81,5 +91,3 @@ interface Config {
     // List of all ship types in game
     ships: {}[];
 }
-
-export let data: Config = JSON.parse(fs.readFileSync(path.join(__dirname , "..", "data", "config" , "hfuniverse.json"), "utf8"));

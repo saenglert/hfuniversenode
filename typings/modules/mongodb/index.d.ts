@@ -1360,7 +1360,7 @@ export class Cursor<T> extends Readable {
     comment(value: string): Cursor<T>;
     // http://mongodb.github.io/node-mongodb-native/2.2/api/Cursor.html#count
     count(applySkipLimit: boolean, callback: MongoCallback<number>): void;
-    count(applySkipLimit: boolean, options?: CursorCommentOptions): Promise<number>;
+    count(applySkipLimit?: boolean, options?: CursorCommentOptions): Promise<number>;
     count(applySkipLimit: boolean, options: CursorCommentOptions, callback: MongoCallback<number>): void;
     // http://mongodb.github.io/node-mongodb-native/2.2/api/Cursor.html#explain
     explain(): Promise<CursorResult>;
